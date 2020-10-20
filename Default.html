@@ -68,7 +68,14 @@ function Calculate() {
 		document.getElementById("KQ").value= x * y;
 	else
 	if (document.getElementById("calculationd").checked)
+	{
+		if (y==0)
+		{
+			document.getElementById("noti").innerHTML= "Phép tính không hợp lệ";
+			return;
+		}
 		document.getElementById("KQ").value= x / y;
+	}
 	else
 	{
 		document.getElementById("noti").innerHTML= "Chưa chọn phép tính";
